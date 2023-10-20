@@ -19,22 +19,20 @@ fi
 
 #FLATPAK setup
 echo "Install FLATPAK :"
-
 sudo apt install flatpak -y
 # sudo apt install gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+
+echo "..........DEBLOAT.........."
 #Remove bloat if found
 echo "Remove ALL the KDE PIM packages : "
-
 sudo apt purge akonadi* -y && sudo apt autoremove -y
 
 echo "Remove the FIREFOX ESR version , Konqueror and Transmission : "
-
 sudo apt purge firefox-esr konqueror transmission -y && sudo apt autoremove -y
 
 echo "Remove the cheese, Dragon Player, JuK , gnome-music , Libre Office and Evolution : "
-
 sudo apt purge cheese dragonplayer juk gnome-music  libreoffice evolution libreoffice-calc libreoffice-draw libreoffice-impress libreoffice-writer -y  && sudo apt autoremove -y
 
 
@@ -57,7 +55,7 @@ mv /wallpapers/* ../*
 # Installing Essential Programs 
 apt install feh kitty rofi picom nitrogen lxpolkit x11-xserver-utils unzip wget curl pulseaudio pavucontrol -y
 # Installing Other less important Programs
-apt install neofetch cpufetch psmisc mangohud vim neovim lxappearance fonts-noto-color-emoji -y
+apt install psmisc mangohud lxappearance fonts-noto-color-emoji -y
 
 # Download Nordic Theme
 cd /usr/share/themes/

@@ -19,6 +19,12 @@ packages=(
   kde-spectacle
   kmenuedit
   konsole
+  vlc
+  celluloid
+  neovim
+  vim
+  neofetch
+  cpufetch
   okular
   qml-module-org-kde-newstuff
   systemsettings
