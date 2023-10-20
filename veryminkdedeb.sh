@@ -10,15 +10,11 @@ packages=(
   hunspell-en-us
   hyphen-en-us
 
-  # aspell-pt-br
-  # hunspell-pt-br
-  # hyphen-pt-br
-
   # Apps
   ark
   neofetch
+  ffmpeg
   dolphin
-  gwenview
   kate
   kde-spectacle
   kmenuedit
@@ -48,7 +44,7 @@ packages=(
   # Theming
   breeze-gtk-theme
   kde-config-gtk-style
-  kde-config-gtk-style-preview
+  kde-config-gtk-style-previwe
   sddm-theme-breeze
 
   # Libs and Plugins
@@ -57,9 +53,16 @@ packages=(
   plasma-browser-integration
   plasma-runners-addons
   pulseaudio-module-bluetooth
+  build-essential 
+  libx11-dev 
+  libxft-dev 
+  libxinerama-dev
 
   # Ark tooling
   unzip
+  tar
+  unrar 
+  7zip 
 )
 
 arguments=(

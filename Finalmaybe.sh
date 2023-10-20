@@ -5,83 +5,7 @@ sudo apt update && sudo apt dist-upgrade && sudo apt autoremove -y
 
 
 #KDE minimal install
-set -x;
-
-apt-get update -yq
-
-packages=(
-  # can I haz sandwich?
-  aspell-en
-  hunspell-en-us
-  hyphen-en-us
-
-  # aspell-pt-br
-  # hunspell-pt-br
-  # hyphen-pt-br
-
-  # Apps
-  ark
-  neofetch
-  ffmpeg
-  dolphin
-  kate
-  kde-spectacle
-  kmenuedit
-  konsole
-  okular
-  qml-module-org-kde-newstuff
-  systemsettings
-
-  # Services
-  bluedevil
-  khotkeys
-  kscreen
-  kwalletmanager
-  plasma-nm
-  plasma-pa
-  powerdevil
-  polkit-kde-agent-1
-  upower
-
-  # DE
-  kwin-x11
-  plasma-desktop
-  plasma-workspace
-  sddm
-  xorg
-
-  # Theming
-  breeze-gtk-theme
-  kde-config-gtk-style
-  kde-config-gtk-style-previwe
-  sddm-theme-breeze
-
-  # Libs and Plugins
-  libqtspell-qt5-1
-  qtvirtualkeyboard-plugin
-  plasma-browser-integration
-  plasma-runners-addons
-  pulseaudio-module-bluetooth
-  build-essential 
-  libx11-dev 
-  libxft-dev 
-  libxinerama-dev
-
-  # Ark tooling
-  unzip
-  tar
-  unrar 
-  7zip 
-  
-)
-
-arguments=(
-   -y
-   -q
-  --no-install-recommends
-)
-
-apt-get install "${arguments[@]}" "${packages[@]}"
+./veryminkdedeb.sh
 
 #Nvidi-Driver install
 echo  -n "Do you Want To Install the NVIDIA Drivers ? 'y' or 'n' : "
@@ -116,6 +40,7 @@ sudo apt purge cheese dragonplayer juk gnome-music  libreoffice evolution libreo
 
 #Setup fonts programs themes wallpapers
 
+echo "Setup fonts programs themes wallpapers : "
 cd $builddir
 # mkdir -p /home/$username/.config
 mkdir -p /home/$username/.fonts
