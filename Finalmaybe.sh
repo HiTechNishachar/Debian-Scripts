@@ -4,23 +4,6 @@
 sudo apt update && sudo apt dist-upgrade && sudo apt autoremove -y
 
 
-#Nvidi-Driver install
-echo  -n "Do you Want To Install the NVIDIA Drivers ? 'y' or 'n' : "
-
-read -r NVIDIA
-
-if [["$NVIDIA" == "yes" || "$NVIDIA" == "y" || "$NVIDIA" == "Y"]]
-then
-    sudo apt install nvidia-driver
-fi
-
-#FLATPAK setup
-echo "Install FLATPAK :"
-
-sudo apt install flatpak -y
-# sudo apt install gnome-software-plugin-flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
 #KDE minimal install
 set -x;
 
@@ -98,6 +81,25 @@ arguments=(
   --no-install-recommends
 )
 
+apt-get install "${arguments[@]}" "${packages[@]}"
+
+#Nvidi-Driver install
+echo  -n "Do you Want To Install the NVIDIA Drivers ? 'y' or 'n' : "
+
+read -r NVIDIA
+
+if [["$NVIDIA" == "yes" || "$NVIDIA" == "y" || "$NVIDIA" == "Y"]]
+then
+    sudo apt install nvidia-driver
+fi
+
+#FLATPAK setup
+echo "Install FLATPAK :"
+
+sudo apt install flatpak -y
+# sudo apt install gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 #Remove bloat if found
 echo "Remove ALL the KDE PIM packages : "
 
@@ -125,6 +127,7 @@ mv user-dirs.dirs /home/$username/.config
 chown -R $username:$username /home/$username
 cd /home/$username/Pictures/backgrounds/
 git clone https://gitlab.com/dwt1/wallpapers
+mv /wallpapers/* ../*
 
 # Installing Essential Programs 
 apt install feh kitty rofi picom nitrogen lxpolkit x11-xserver-utils unzip wget curl pulseaudio pavucontrol -y
