@@ -5,7 +5,7 @@ sudo apt update && sudo apt dist-upgrade && sudo apt autoremove -y
 
 
 #KDE minimal install
-./veryminkdedeb.sh
+sudo bash ./veryminkdedeb.sh
 
 #Nvidi-Driver install
 echo  -n "Do you Want To Install the NVIDIA Drivers ? 'y' or 'n' : "
