@@ -1,11 +1,13 @@
 #!/bin/bash
 
+echo "<<<---Starting Minimal KDE Install Script Now--->>> "
+
 set -x;
 
 apt-get update -yq
 
 packages=(
-  # can I haz sandwich?
+  # language resources
   aspell-en
   hunspell-en-us
   hyphen-en-us
@@ -20,6 +22,7 @@ packages=(
   kmenuedit
   konsole
   vlc
+  mpv
   celluloid
   neovim
   vim
@@ -77,3 +80,5 @@ arguments=(
 )
 
 apt-get install "${arguments[@]}" "${packages[@]}"
+
+echo "XXX--- Exiting Minimal KDE Install Script Now ---XXX "
