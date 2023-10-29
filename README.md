@@ -1,7 +1,7 @@
 # Debian Scripts
 
 Master script:
-1. Window Manager Installation
+1. Window Manager/ Desktop Environment Installation
 2. Application Installation
 3. Set up theming, fonts and wallpapers
 4. Debloat
