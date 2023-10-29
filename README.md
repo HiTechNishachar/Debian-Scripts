@@ -1,4 +1,4 @@
-# Debkde
+# Debian Scripts
 
 Master script:
 1. Window Manager Installation
