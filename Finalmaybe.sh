@@ -82,3 +82,13 @@ cd Nordzy-cursors
 ./install.sh
 cd $builddir
 rm -rf Nordzy-cursors
+
+
+# bash setup and starship
+
+mkdir bash-setup
+cd bash-setup
+https://github.com/HiTechNishachar/Dotfiles/blob/main/.bashrc
+https://github.com/ChrisTitusTech/mybash/blob/main/starship.toml
+https://github.com/ChrisTitusTech/mybash/blob/main/setup.sh
+sudo bash setup.sh

@@ -16,8 +16,14 @@ chown -R $username:$username /home/$username
 echo "Download wallpapers : "
 
 git clone https://gitlab.com/dwt1/wallpapers
-mv /wallpapers/* /home/$username/Pictures/backgrounds/
+mkdir /home/$username/Pictures/backgrounds/DT-Wallpapers
+mv /wallpapers/* /home/$username/Pictures/backgrounds/DT-Wallpapers
 sudo rm -rf /wallpapers
+
+git clone https://github.com/ChrisTitusTech/nord-background
+mkdir /home/$username/Pictures/backgrounds/CTT-Nord-Backgrounds
+mv /nord-background/* /home/$username/Pictures/backgrounds/CTT-Nord-Backgrounds
+sudo rm -rf /nord-background
 
 
 # Download Nordic Theme
