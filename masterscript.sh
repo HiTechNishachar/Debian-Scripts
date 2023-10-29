@@ -18,18 +18,10 @@ sudo bash ./lookssetup.sh
 sudo bash ./debloat.sh
 
 
-echo "######################################"
+echo "##############################"
 
-echo "All Set Now, reboot at convenience !!!"
+echo "All Set Now, rebooting NOW !!!"
 
-echo "######################################"
+echo "##############################"
 
-
-echo  -n "Do you wish to restart system? 'y' or 'n' : "
-
-read -r RESTART
-
-if [["$RESTART" == "yes" || "$RESTART" == "y" || "$RESTART" == "Y"]]
-then
-    sudo reboot
-fi
+sudo reboot
