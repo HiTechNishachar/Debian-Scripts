@@ -1,0 +1,43 @@
+wifi problems? (solution from https://easylinuxtipsproject.blogspot.com/p/realtek.html#ID5)
+
+sudo apt install iw
+sudo apt install wireless-tools
+sudo apt-get install git build-essential dkms linux-headers-$(uname -r)
+git clone https://github.com/lwfinger/rtw88.git
+cd rtw88
+make
+sudo make install
+sudo modprobe -r rtw_8723de
+sudo modprobe rtw_8723de ant_sel=2
+echo "options rtw_8723de ant_sel=2" | sudo tee -a /etc/modprobe.d/rtw_8723de.conf
+reboot
+
+Kernel Panic? Xanmod installation (check official https://xanmod.org/)
+
+wget -qO - https://dl.xanmod.org/archive.key | sudo gpg --dearmor -o /usr/share/keyrings/xanmod-archive-keyring.gpg
+echo 'deb [signed-by=/usr/share/keyrings/xanmod-archive-keyring.gpg] http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-release.list
+sudo apt update && sudo apt install linux-xanmod-x64v3
+reboot
+
+Audio Problems?
+
+sudo apt install pulseaudio pavucontrol
+sudo apt install libcanberra-pulse
+
+
+git clone https://github.com/HiTechNishachar/Dotfiles
+mv .bashrc .bashrc.orig
+cp ./Dotfiles/.bashrc .bashrc
+sudo apt install autojump
+curl -sS https://starship.rs/install.sh | sh
+source .bashrc
+sudo apt install tldr
+tldr -u
+
+wget https://github.com/Alex313031/thorium/releases/download/M117.0.5938.157/thorium-browser_117.0.5938.157_amd64.deb
+sudo apt install thorium-browser_117.0.5938.157_amd64.deb
+
+Hindi fonts
+sudo apt install fonts-deva fonts-deva-extra
+All fonts local
+sudo apt install fonts-indic
