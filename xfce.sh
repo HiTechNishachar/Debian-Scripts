@@ -9,7 +9,7 @@ sudo apt install -y build-essential
 sudo apt install -y intel-microcode
 
 #XFCE packages
-sudo apt install -y xfce4 libxfce4ui-utils thunar xfce4-appfinder xfce4-panel xfce4-session xfce4-settings xfce4-terminal xfconf xfdesktop4 xfwm4
+sudo apt install -y xfce4 libxfce4ui-utils thunar xfce4-appfinder xfce4-panel xfce4-session xfce4-settings xfce4-terminal xfconf xfdesktop4 xfwm4 xfce4-netload-plugin xfce4-power-manager-data
 
 sudo apt install network-manager-gnome network-manager
 
@@ -28,7 +28,7 @@ sudo apt install -y bluez blueman
 sudo systemctl enable bluetooth
 
 # Programs
-sudo apt install -y neofetch htop git curl wget unzip tar 7zip
+sudo apt install -y timeshift htop git curl wget unzip tar 7zip
 
 # Install fonts
 sudo apt install fonts-font-awesome fonts-powerline fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus ttf-mscorefonts-installer fonts-deva fonts-deva-extra
