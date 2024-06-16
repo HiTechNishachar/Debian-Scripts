@@ -1,5 +1,5 @@
 wifi problems? (solution from https://easylinuxtipsproject.blogspot.com/p/realtek.html#ID5)
-sudo apt install iw
+sudo apt install iw firmware-realtek
 sudo apt install wireless-tools
 sudo apt-get install git build-essential dkms linux-headers-$(uname -r)
 create backup of /etc/network/interfaces
