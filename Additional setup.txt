@@ -1,8 +1,10 @@
 wifi problems? (solution from https://easylinuxtipsproject.blogspot.com/p/realtek.html#ID5)
-
 sudo apt install iw
 sudo apt install wireless-tools
 sudo apt-get install git build-essential dkms linux-headers-$(uname -r)
+create backup of /etc/network/interfaces
+then delete everything after auto lo section and reboot
+
 git clone https://github.com/lwfinger/rtw88.git
 cd rtw88
 make
