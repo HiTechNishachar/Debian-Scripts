@@ -9,7 +9,7 @@ sudo apt install -y build-essential
 sudo apt install -y intel-microcode
 
 #XFCE packages
-sudo apt install -y xfce4 libxfce4ui-utils thunar xfce4-appfinder xfce4-panel xfce4-session xfce4-settings xfce4-terminal xfconf xfdesktop4 xfwm4 xfce4-netload-plugin xfce4-power-manager-data
+sudo apt install -y xfce4 libxfce4ui-utils thunar xfce4-appfinder xfce4-panel xfce4-session xfce4-settings xfce4-terminal xfconf xfdesktop4 xfwm4 xfce4-netload-plugin xfce4-power-manager-data xfce4-sensors-plugin xfce4-genmon-plugin lm-sensors
 
 sudo apt install network-manager-gnome network-manager
 
